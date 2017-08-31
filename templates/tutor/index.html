@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<label>WELCOME</label>
+<form>
+    <link rel="stylesheet" type="text/css" href="{% static 'tutor/style.css' %}"/>
+    <div class="btn">
+        <button class="button" style="vertical-align:middle" type="button"
+                onclick="window.location.href='http://127.0.0.1:8000/create'"><span>CREATE </span></button>
+        <button class="button" style="vertical-align:middle" type="button"
+                onclick="window.location.href='http://127.0.0.1:8000/2'"><span>CHANGE</span></button>
+    </div>
+
+</form>
+
+{#<table>#}
+{#    <tr>#}
+{#        <th>Имя Сотрудника</th>#}
+{#        <th>Дата Рождения</th>#}
+{#    </tr>#}
+{#    {% for item in show_data %}#}
+{#    <tr>#}
+{#        <td>{{ item.name }}</td>#}
+{#        <td>{{ item.birth_date }}</td>#}
+{#    </tr>#}
+{#    {% endfor %}#}
+{#</table>#}
+
+</body>
+</html>

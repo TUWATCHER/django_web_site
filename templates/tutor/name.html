@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+
+    <script type="text/javascript" src="{% static "tutor/jquery-3.2.1.js" %}"></script>
+    <script type="text/javascript" src="{% static "tutor/jquery-ui-1.12.1.custom/jquery-ui.min.js" %}"></script>
+    <ul>
+        {{ form.as_ul }}
+        <script>
+            $(function () {
+
+                $(".datepicker").datepicker({
+                    changeMonth: true,
+                    dateFormat: "yy-mm-dd",
+                    changeYear: true,
+                    yearRange: "2000:2020",
+
+                });
+            });
+        </script>
+    </ul>
+    <input type="submit" value="Submit"/>
+</form>
+</body>
+</html>
